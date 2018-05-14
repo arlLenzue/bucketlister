@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+
+<html> 
+<head> 
+	<title><%= title %></title> 
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Dependencies -->
+	<script type="text/javascript" src="/lib/angular/angular.js"></script>
+	<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+
+	<!-- controllers -->
+	<script type="text/javascript" src="/main/controllers/main.client.controller.js"></script>
+	<script type="text/javascript" src="application.js"></script>
+
+	<!-- services -->
+	<script type="text/javascript" src="/main/services/main.client.service.js"></script>
+
+</head> 
+<body ng-app="app" ng-controller="MainController" ng-init="model.init()"> 
+
+	<section ng-include="'main/views/main.client.view.html'"></section>
+
+</body> 
+</html>
