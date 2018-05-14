@@ -1,0 +1,8 @@
+<div ng-if="model.user">
+	<span ng-bind="'Hi ' + model.user.fullName"></span>
+	<span style="cursor: pointer" ng-click="model.redirectBtn('signout')">Signout</span> 
+</div>
+<div ng-if="!model.user">
+	<span style="cursor: pointer" ng-click="model.redirectBtn('signup')">Signup</span> 
+	<span style="cursor: pointer" ng-click="model.redirectBtn('signin')">Signin</span> 
+</div>
