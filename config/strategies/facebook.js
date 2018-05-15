@@ -12,7 +12,7 @@ module.exports = function() {
 		passReqToCallback: true 
 	}, 
 		function(req, accessToken, refreshToken, profile, done) {
-			var splitName = fullName.split(' ');  
+			var splitName = profile.displayName.split(' ');  
 			var providerData = profile._json; providerData.accessToken = accessToken; providerData.refreshToken = refreshToken;
 			var providerUserProfile = { 
 				firstName: profile.name.givenName || splitName[0], 
