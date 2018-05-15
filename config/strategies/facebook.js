@@ -11,17 +11,15 @@ module.exports = function() {
 		callbackURL: config.facebook.callbackURL, 
 		passReqToCallback: true 
 	}, 
-		function(req, accessToken, refreshToken, profile, done) { 
-		
-			console.log(profile,'profile');
-				    
+		function(req, accessToken, refreshToken, profile, done) {
+			var splitName = fullName.split(' ');  
 			var providerData = profile._json; providerData.accessToken = accessToken; providerData.refreshToken = refreshToken;
 			var providerUserProfile = { 
-				firstName: profile.name.givenName, 
-				lastName: profile.name.familyName, 
+				firstName: profile.name.givenName || splitName[0], 
+				lastName: profile.name.familyName || splitName[0], 
 				fullName: profile.displayName, 
-				email: profile.emails[0].value, 
-				username: profile.username, 
+				email: profile.emails ? profile.emails[0].value : '', 
+				username: profile.username || profile.displayName, 
 				provider: 'facebook', 
 				providerId: profile.id, 
 				providerData: providerData 
