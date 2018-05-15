@@ -16,7 +16,7 @@ module.exports = function() {
 			var providerData = profile._json; providerData.accessToken = accessToken; providerData.refreshToken = refreshToken;
 			var providerUserProfile = { 
 				firstName: profile.name.givenName || splitName[0], 
-				lastName: profile.name.familyName || splitName[0], 
+				lastName: profile.name.familyName || splitName[1], 
 				fullName: profile.displayName, 
 				email: profile.emails ? profile.emails[0].value : '', 
 				username: profile.username || profile.displayName, 
