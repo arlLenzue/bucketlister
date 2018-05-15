@@ -12,6 +12,9 @@ module.exports = function() {
 		passReqToCallback: true 
 	}, 
 		function(req, accessToken, refreshToken, profile, done) { 
+		
+			console.log(accessToken,'accessToken);
+				    
 			var providerData = profile._json; providerData.accessToken = accessToken; providerData.refreshToken = refreshToken;
 			var providerUserProfile = { 
 				firstName: profile.name.givenName, 
