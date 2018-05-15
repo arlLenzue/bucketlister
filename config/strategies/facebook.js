@@ -13,7 +13,7 @@ module.exports = function() {
 	}, 
 		function(req, accessToken, refreshToken, profile, done) { 
 		
-			console.log(accessToken,'accessToken');
+			console.log(profile,'profile');
 				    
 			var providerData = profile._json; providerData.accessToken = accessToken; providerData.refreshToken = refreshToken;
 			var providerUserProfile = { 
