@@ -4,7 +4,7 @@ module.exports = {
 	facebook: { 
 		clientID: process.env.ClientID, 
 		clientSecret: process.env.ClientSecret,
-		callbackURL: 'https://bucketlister-production.herokuapp.com/oauth/facebook/callback' 
+		callbackURL: 'https://bucketlister.herokuapp.com/oauth/facebook/callback' 
 	}
 
 };
