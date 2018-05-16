@@ -60,6 +60,8 @@ UserSchema.methods.hashPassword = function(password) {
 }; 
 
 UserSchema.methods.authenticate = function(password) { 
+	console.log(this.password, 'this.password');
+	console.log(this.hashPassword(password), 'this.hashPassword(password)');
 	return this.password === this.hashPassword(password); 
 }; 
 	
