@@ -28,6 +28,7 @@ var UserSchema = new Schema({
 			}, 'Password should be at least 6 characters'
 		]
 	},
+	salt: String,
 	provider: { 
 		type: String,
 		required: 'Provider is required' 
@@ -55,8 +56,8 @@ UserSchema.pre('save', function(next) {
 }); 
 
 UserSchema.methods.hashPassword = function(password) { 
-	var salt = new Buffer(crypto.randomBytes(16).toString('base64'), 'base64');
-	return crypto.pbkdf2Sync(password, salt, 10000, 64, 'sha512').toString('base64'); 
+	this.salt = new Buffer(crypto.randomBytes(16).toString('base64'), 'base64');
+	return crypto.pbkdf2Sync(password, this.salt, 10000, 64, 'sha512').toString('base64'); 
 }; 
 
 UserSchema.methods.authenticate = function(password) { 
