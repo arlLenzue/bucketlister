@@ -10,7 +10,8 @@ module.exports = function() {
 		clientSecret: config.facebook.clientSecret, 
 		callbackURL: config.facebook.callbackURL, 
 		passReqToCallback: true,
-		profileFields: ['id', 'emails', 'name', 'username', 'displayName']
+		profileFields: ['id', 'emails', 'name', 'username', 'displayName'],
+		enableProof: false
 	}, 
 		function(req, accessToken, refreshToken, profile, done) {
 			var splitName = profile.displayName.split(' ');  
