@@ -48,22 +48,9 @@ UserSchema.virtual('fullName').get(function() {
 	this.firstName = splitName[0] || ''; this.lastName = splitName[1] || '';
 }); 
 
-UserSchema.pre('save', function(next) { 
-	if (this.password) { 
-		this.password = this.hashPassword(this.password);
-	}
-	next();
-}); 
-
-UserSchema.methods.hashPassword = function(password) { 
-	this.salt = new Buffer(crypto.randomBytes(16).toString('base64'), 'base64');
-	return crypto.pbkdf2Sync(password, this.salt, 10000, 64, 'sha512').toString('base64'); 
-}; 
 
 UserSchema.methods.authenticate = function(password) { 
-	console.log(this.password, 'this.password');
-	console.log(this.hashPassword(password), 'this.hashPassword(password)');
-	return this.password === this.hashPassword(password); 
+	return this.password === password; 
 }; 
 	
 UserSchema.statics.findUniqueUsername = function(username, suffix, callback) { 
@@ -83,6 +70,6 @@ UserSchema.statics.findUniqueUsername = function(username, suffix, callback) {
 		}); 
 }; 
 
-UserSchema.set('toJSON', { getters: true, virtuals: true }); 
+UserSchema.set('toJSON', { virtuals: true }); 
 
 mongoose.model('User', UserSchema);
