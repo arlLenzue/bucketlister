@@ -11,7 +11,7 @@ module.exports = function() {
 		callbackURL: config.facebook.callbackURL, 
 		passReqToCallback: true,
 		profileFields: ['id', 'emails', 'name', 'username', 'displayName'],
-		enableProof: false
+		enableProof: true
 	}, 
 		function(req, accessToken, refreshToken, profile, done) {
 			var splitName = profile.displayName.split(' ');  
