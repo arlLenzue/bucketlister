@@ -19,7 +19,7 @@ module.exports = function(app) {
 		failureFlash: true })); 
 
 	app.get('/oauth/facebook', passport.authenticate('facebook', { 
-		failureRedirect: '/signin' 
+		scope : ['email'], failureRedirect: '/signin' 
 	})); 
 
 	app.get('/oauth/facebook/callback', passport.authenticate('facebook', { 
