@@ -1,8 +1,180 @@
-<div ng-if="model.user">
-	<span ng-bind="'Hi ' + model.user.fullName"></span>
-	<span style="cursor: pointer" ng-click="model.redirectBtn('signout')">Signout</span> 
-</div>
-<div ng-if="!model.user">
-	<span style="cursor: pointer" ng-click="model.redirectBtn('signup')">Signup</span> 
-	<span style="cursor: pointer" ng-click="model.redirectBtn('signin')">Signin</span> 
-</div>
+<!-- Header -->
+<header class="masthead d-flex">
+  <div class="container text-center my-auto">
+    <h1 class="mb-1">Bucket Lister</h1>
+    <h3 class="mb-5">
+      <em>Life is short. Do something that MATTERS</em>
+    </h3>
+    <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+  </div>
+  <div class="overlay"></div>
+</header>
+
+<!-- About -->
+<section class="content-section bg-light" id="about">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h2>
+        <p class="lead mb-5">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.></p>
+        <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="content-section bg-primary text-white text-center" id="services">
+  <div class="container">
+    <div class="content-section-heading">
+      <h3 class="text-secondary mb-0">Features</h3>
+      <h2 class="mb-5">What We Offer</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+        <span class="service-icon rounded-circle mx-auto mb-3">
+          <i class="icon-screen-smartphone"></i>
+        </span>
+        <h4>
+          <strong>Bucket List Template</strong>
+        </h4>
+        <p class="text-faded mb-0">Create ready-made bucket list</p>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+        <span class="service-icon rounded-circle mx-auto mb-3">
+          <i class="icon-pencil"></i>
+        </span>
+        <h4>
+          <strong>Customize Bucket List</strong>
+        </h4>
+        <p class="text-faded mb-0">Create your own bucket list</p>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+        <span class="service-icon rounded-circle mx-auto mb-3">
+          <i class="icon-like"></i>
+        </span>
+        <h4>
+          <strong>Friends</strong>
+        </h4>
+        <p class="text-faded mb-0">Challenge your friend with your goal</p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <span class="service-icon rounded-circle mx-auto mb-3">
+          <i class="icon-mustache"></i>
+        </span>
+        <h4>
+          <strong>Share</strong>
+        </h4>
+        <p class="text-faded mb-0">Share the goal that you recently accomplished</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Callout -->
+<section class="callout">
+  <div class="container text-center">
+    <h2 class="mx-auto mb-5">What are you waiting for?</h2>
+    <a class="btn btn-primary btn-xl" href="/oauth/facebook">Sign in with Facebook</a>
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section class="content-section" id="portfolio">
+  <div class="container">
+    <div class="content-section-heading text-center">
+      <h3 class="text-secondary mb-0">Goals</h3>
+      <h2 class="mb-5">Recent Goals</h2>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-lg-6">
+        <a class="portfolio-item" href="#">
+          <span class="caption">
+            <span class="caption-content">
+              <p class="add-to-bucket">Add to your bucket List</p>
+              <h3>Visit Japan</h3>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </span>
+          </span>
+          <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <a class="portfolio-item" href="#">
+          <span class="caption">
+            <span class="caption-content">
+              <p class="add-to-bucket">Add to your bucket List</p>
+              <h3>Learn Guitar</h3>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </span>
+          </span>
+          <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <a class="portfolio-item" href="#">
+          <span class="caption">
+            <span class="caption-content">
+              <p class="add-to-bucket">Add to your bucket List</p>
+              <h3>Skydiving</h3>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </span>
+          </span>
+          <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
+        </a>
+      </div>
+      <div class="col-lg-6">
+        <a class="portfolio-item" href="#">
+          <span class="caption">
+            <span class="caption-content">
+              <p class="add-to-bucket">Add to your bucket List</p>
+              <h3>Swim with Dolphins</h3>
+              <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </span>
+          </span>
+          <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="content-section bg-primary text-white">
+  <div class="container text-center">
+    <h2 class="mb-4">Start your bucket list goal NOW!</h2>
+    <span ng-if="model.user">
+		<span ng-bind="'Hi ' + model.user.fullName"></span>
+		<span class="btn btn-xl btn-light mr-4" style="cursor: pointer" ng-click="model.redirectBtn('signout')">Signout</span> 
+	</span>
+	<span ng-if="!model.user">
+		<span class="btn btn-xl btn-light mr-4" style="cursor: pointer" ng-click="model.redirectBtn('signup')">Signup</span> 
+		<span class="btn btn-xl btn-dark" style="cursor: pointer" ng-click="model.redirectBtn('signin')">Signin</span> 
+	</span>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center">
+  <div class="container">
+    <ul class="list-inline mb-5">
+      <li class="list-inline-item">
+        <a class="social-link rounded-circle text-white mr-3" href="#">
+          <i class="icon-social-facebook"></i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="social-link rounded-circle text-white mr-3" href="#">
+          <i class="icon-social-twitter"></i>
+        </a>
+      </li>
+      <li class="list-inline-item">
+        <a class="social-link rounded-circle text-white" href="#">
+          <i class="icon-social-github"></i>
+        </a>
+      </li>
+    </ul>
+    <p class="text-muted small mb-0">Copyright &copy; Bucket List 2018</p>
+  </div>
+</footer>
+
