@@ -39,21 +39,6 @@ h6 {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Map */
-.map {
-  height: 30rem;
-}
-
-@media (max-width: 992px) {
-  .map {
-    height: 75%;
-  }
-}
-
-.map iframe {
-  pointer-events: none;
-}
-
 .scroll-to-top {
   position: fixed;
   right: 15px;
@@ -229,21 +214,12 @@ h6 {
   max-width: 30rem;
 }
 
-.add-to-bucket{
-  display: none;
-  text-align: center;
-}
-
 .portfolio-item {
   display: block;
   position: relative;
   overflow: hidden;
   max-width: 530px;
   margin: auto auto 1rem;
-}
-
-.portfolio-item:hover .add-to-bucket {
-  display: block;
 }
 
 .portfolio-item .caption {
