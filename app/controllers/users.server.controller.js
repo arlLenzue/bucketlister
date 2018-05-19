@@ -1,3 +1,5 @@
+var User = require('mongoose').model('User'); 
+
 var User = require('mongoose').model('User'),
 	passport = require('passport');
 
@@ -59,7 +61,9 @@ exports.signup = function(req, res, next) {
 		var user = new User(req.body); 
 		var message = null; 
 
-		user.provider = 'local'; user.save(function(err) { 
+		user.provider = 'local'; 
+
+		user.save(function(err) { 
 			if (err) { 
 				var message = getErrorMessage(err); 
 				req.flash('error', message); 

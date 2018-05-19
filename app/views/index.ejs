@@ -1,77 +1,35 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html>
+<title> <%=title %> </title> 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('../img/bg-masthead.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style>
+<body>
 
-<html> 
-<head> 
-	<title><%= title %></title> 
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    Bucket Lister
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">Website under construction</p>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+    Copyright &copy; Bucket List 2018
+  </div>
+</div>
 
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- Dependencies -->
-	<script type="text/javascript" src="/lib/angular/angular.js"></script>
-	<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
-
-	<!-- controllers -->
-	<script type="text/javascript" src="/main/controllers/main.client.controller.js"></script>
-	<script type="text/javascript" src="application.js"></script>
-
-	<!-- services -->
-	<script type="text/javascript" src="/main/services/main.client.service.js"></script>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/stylish-portfolio.js" defer></script>
-
-</head> 
-<body id="page-top" ng-app="app" ng-controller="MainController" ng-init="model.init()"> 
-
-	<a class="menu-toggle rounded" href="#">
-	  <i class="fa fa-bars"></i>
-	</a>
-	<nav id="sidebar-wrapper">
-	  <ul class="sidebar-nav">
-	    <li class="sidebar-brand">
-	      <a class="js-scroll-trigger" href="#page-top">Bucket Lister</a>
-	    </li>
-	    <li class="sidebar-nav-item">
-	      <a class="js-scroll-trigger" href="#page-top">Home</a>
-	    </li>
-	    <li class="sidebar-nav-item">
-	      <a class="js-scroll-trigger" href="#about">About</a>
-	    </li>
-	    <li class="sidebar-nav-item">
-	      <a class="js-scroll-trigger" href="#services">Features</a>
-	    </li>
-	    <li class="sidebar-nav-item">
-	      <a class="js-scroll-trigger" href="#portfolio">Goals</a>
-	    </li>
-	  </ul>
-	</nav>
-
-	<div ng-include="'main/views/main.client.view.html'"></div>
-
-	<!-- Scroll to Top Button-->
-	<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
-	  <i class="fa fa-angle-up"></i>
-	</a>
-
-</body> 
+</body>
 </html>

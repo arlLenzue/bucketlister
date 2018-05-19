@@ -28,7 +28,6 @@ var UserSchema = new Schema({
 			}, 'Password should be at least 6 characters'
 		]
 	},
-	salt: String,
 	provider: { 
 		type: String,
 		required: 'Provider is required' 
@@ -70,6 +69,6 @@ UserSchema.statics.findUniqueUsername = function(username, suffix, callback) {
 		}); 
 }; 
 
-UserSchema.set('toJSON', { virtuals: true }); 
+UserSchema.set('toJSON', { getters: true, virtuals: true }); 
 
 mongoose.model('User', UserSchema);
