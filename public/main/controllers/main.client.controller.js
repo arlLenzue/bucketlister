@@ -24,7 +24,6 @@ angular.module('main', [])
 			}
 
 			MainService.getUser(data, function(user){
-				console.log(user,'user');
 				_model.user = user;
 			})
 		}
