@@ -6,5 +6,7 @@ module.exports = function() {
 
 	require('../app/models/user.server.model'); 
 	
+	require('../app/models/bucketitem.server.model'); 
+	
 	return db; 
 };
