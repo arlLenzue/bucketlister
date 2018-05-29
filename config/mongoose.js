@@ -8,5 +8,7 @@ module.exports = function() {
 	
 	require('../app/models/bucketitem.server.model'); 
 	
+	require('../app/models/buckettemplate.server.model'); 
+	
 	return db; 
 };
