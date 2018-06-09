@@ -7,6 +7,12 @@ module.exports = function(app) {
 	app.route('/getUser') 
 	.get(users.getUser)
 
+	app.route('/getUsers')
+	.get(users.list)
+
+	app.route('/updateUser')
+	.post(users.update)
+
 	app.route('/signup') 
 	.get(users.renderSignup) 
 	.post(users.signup);
@@ -28,22 +34,3 @@ module.exports = function(app) {
 
 	app.get('/signout', users.signout); 
 };
-
-/*
-var users = require('../../app/controllers/users.server.controller'); 
-
-module.exports = function(app) {
-
-	app.route('/users')
-	.post(users.create)
-	.get(users.list);
-
-	app.route('/users/:userId')
-	.get(users.read)
-	.put(users.update)
-	.delete(users.delete);
-
-	app.param('userId', users.userByID);
-
-};
-*/

@@ -25,6 +25,29 @@ var getErrorMessage = function(err) {
 
 }; 
 
+exports.list = function(req, res, next) { 
+	User.find({}, function(err, users) { 
+		if (err) { 
+			return next(err); 
+		} else { 
+			res.json(users); 
+		} 
+	}); 
+};
+
+exports.update = function(req, res, next) {
+
+	User.findByIdAndUpdate(req.user.id, req.body, 
+		function(err, user) { 
+			console.log(user);
+			if (err) { 
+				return next(err); 
+			} else { 
+				return res.redirect('/#/dashboard/users');
+			} 
+		}); 
+};
+
 exports.getUser = function(req, res){
 	if(req.user){
 		res.json(req.user);
