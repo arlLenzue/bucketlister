@@ -1,11 +1,11 @@
 <section class="content-section bg-primary text-white">
   <div class="container text-center">
     <h2 class="mb-4">Start your bucket list goal NOW!</h2>
-    <span ng-if="model.user">
+    <span ng-if="model.user._id">
 		<span ng-bind="'Hi ' + model.user.fullName"></span>
 		<span class="btn btn-xl btn-light mr-4" style="cursor: pointer" ng-click="model.redirectBtn('signout')">Signout</span> 
 	</span>
-	<span ng-if="!model.user">
+	<span ng-if="!model.user._id">
 		<span class="btn btn-xl btn-light mr-4" style="cursor: pointer" ng-click="model.redirectBtn('signup')">Signup</span> 
 		<span class="btn btn-xl btn-dark" style="cursor: pointer" ng-click="model.redirectBtn('signin')">Signin</span> 
 	</span>
