@@ -7,6 +7,14 @@ angular.module('main')
 		_this.http(data,callback);
 	}
 
+	_this.getUsers = function(data,callback,error){
+		_this.http(data,callback);
+	}
+
+	_this.updateUser = function(data,callback,error){
+		_this.http(data,callback);
+	}
+
 	_this.redirect = function(path){
 		$window.location.href = path;
 	}
