@@ -37,7 +37,7 @@ exports.list = function(req, res, next) {
 
 exports.update = function(req, res, next) {
 
-	User.findByIdAndUpdate(req.user.id, req.body, 
+	User.findByIdAndUpdate(req.body._id, req.body, 
 		function(err, user) { 
 			console.log(user);
 			if (err) { 
