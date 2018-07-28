@@ -36,14 +36,21 @@ exports.list = function(req, res, next) {
 };
 
 exports.update = function(req, res, next) {
-
+	var local = "5b1bb7816f56252fd0074fd4";
+	var fb = "5afc3d3251c52700040ed166";
+	var gmail = "5afaffa07c32e30004200f14";
+	var userid = req.user._id;
 	User.findByIdAndUpdate(req.body._id, req.body, 
 		function(err, user) { 
-			console.log(user);
 			if (err) { 
 				return next(err); 
 			} else { 
-				return res.redirect('/#/dashboard/users');
+				if(userid == local || userid == fb || userid == gmail){
+					return res.redirect('/#/dashboard/users');
+				}else{
+					return next("You are not authorized to perform this operation")
+				}
+				
 			} 
 		}); 
 };
